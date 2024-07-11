@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de registro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <form action="#">
+            <h1>Cadastro</h1>
+            <label for="nome">
+                Nome:
+                <input name="nome" type="text" placeholder=" " minlength="3">
+                <p >Insira seu nome completo</p>
+            </label>
+            <label for="email">
+                Email:
+                <input name="email" type="email" placeholder=" " pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+                <p >digite um email no formato: <br> '"exemplo@dominio.com"'</p>
+            </label>
+            <label for="senha">
+                Senha:
+                <input name="senha" type="password" placeholder=" " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <p >Sua senha deve conter: <br> uma letra maiúscula <br> uma letra minuscula <br> um numero</p>
+            </label>
+            <fieldset>
+                <legend>Gênero:</legend>
+                <div>
+                    <label class="genre">
+                        <input type="radio" name="maculino">
+                        Masculino
+                    </label>
+                    <label class="genre">
+                        <input type="radio" name="feminino">
+                        Feminino
+                    </label>
+                </div>
+            </fieldset>
+            <label for="aniversario">
+                Data de Nascimento:
+                <input type="date">
+                <p >Insira a sua data de aniversário.</p>
+            </label>
+            <label for="pais">
+                País:
+                <select name="pais" id="pais" >
+                    <option value="1">Brasil</option>
+                    <option value="2">Argentina</option>
+                    <option value="3">Espanha</option>
+                    <option value="4">Portugal</option>
+                    <option value="5">Alemanha</option>
+                    <option value="6">EUA</option>
+                </select>
+                <p >Escolha o seu país de origem.</p>
+            </label>
+            <label for="telefone">
+                Telefone:
+                <input name="telefone" type="tel" placeholder=" " pattern="([0-9].{10})">
+                <p >Digite um número de telefone no formato: br 00 0 0000 0000.</p>
+            </label>
+
+            <label for="terms" class="check">
+                <input type="checkbox" required> Aceito termos e Condições
+            </label>
+
+            <label for="subscribe" class="check">
+                <input type="checkbox"> Inscrever-se na newsletter
+            </label>
+
+            <button type="button">Cadastrar</button>
+        </form>
+    </main>
+</body>
+</html>
