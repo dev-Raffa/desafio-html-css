@@ -13,12 +13,12 @@ body{
 
 body:has(input[name="toggleTheme"]:checked){
     background-color: black;
-    color:#fff;
 }
 
 header{
     height: 40px;
     display: flex;
+    align-items: center;
     justify-content: right;
 
     label{
@@ -108,10 +108,7 @@ main {
             & input:invalid ~ p,
               select:invalid ~ p{
                 display: block;
-            }
-
-            
-            
+            }            
         }
         
         & label:has(input:placeholder-shown) ~ button,
